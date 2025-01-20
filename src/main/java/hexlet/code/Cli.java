@@ -11,6 +11,7 @@ public class Cli {
         String name = scanner.nextLine();
 
         System.out.println("Hello, " + name + "!");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
 
         scanner.close();
     }

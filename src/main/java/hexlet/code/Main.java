@@ -3,11 +3,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         boolean running = true;
         while (running) {
             System.out.println("Please enter the game number and press Enter.");
             System.out.println("1 - Greet");
+            System.out.println("2 - Even");
             System.out.println("0 - Exit");
             System.out.println("Enter your choice: ");
 
@@ -17,6 +19,10 @@ public class Main {
                 case 1:
                     Cli.greetUser();
                     break;
+                case 2:
+                Even.gamer(sc);
+
+                        break;
                 case 0:
                     running = false;
                     System.out.println("Exiting the game. Goodbye!");
