@@ -8,7 +8,6 @@ public class Main {
         while (running) {
             System.out.println("Please enter the game number and press Enter.");
             System.out.println("1 - Greet");
-
             System.out.println("0 - Exit");
             System.out.println("Enter your choice: ");
 
