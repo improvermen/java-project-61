@@ -9,7 +9,7 @@ public class Engine {
 
     public void startEvenGame() {
         System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.println("May I have your name? ");
         String name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
         System.out.println("Answer 'yes' if the number is even, otherwise 'no'.");
@@ -18,7 +18,7 @@ public class Engine {
         while (correctAnswers < 3) {
             int currentNumber = random.nextInt(100);
             System.out.println("Question: " + currentNumber);
-            System.out.print("Your answer: ");
+            System.out.println("Your answer: ");
             String answer = scanner.nextLine();
 
             String correctAnswer = (currentNumber % 2 == 0) ? "yes" : "no";
@@ -27,8 +27,8 @@ public class Engine {
                 System.out.println("Correct!");
                 correctAnswers++;
             } else {
-                System.out.printf("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                System.out.printf("Let's try again, " + name);
+                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
+                System.out.println("Let's try again, " + name);
                 return;
             }
         }
@@ -37,7 +37,7 @@ public class Engine {
 
     public void startCalcGame() {
         System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.println("May I have your name? ");
         String name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
         System.out.println("What is the result of the expression?");
@@ -50,7 +50,7 @@ public class Engine {
 
             String question = String.format("%d %s %d", num1, operation, num2);
             System.out.println("Question: " + question);
-            System.out.print("Your answer: ");
+            System.out.println("Your answer: ");
             String answer = scanner.nextLine();
 
             String correctAnswer;
@@ -72,11 +72,11 @@ public class Engine {
                 System.out.println("Correct!");
                 correctAnswers++;
             } else {
-                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.%n", answer, correctAnswer);
-                System.out.printf("Let's try again, %s!%n", name);
+                System.out.println("yes' is wrong answer ;(. Correct answer was 'no'.");
+                System.out.println("Let's try again, " + name);
                 return;
             }
         }
-        System.out.printf("Congratulations, %s!%n", name);
+        System.out.println("Congratulations, " + name);
     }
 }
