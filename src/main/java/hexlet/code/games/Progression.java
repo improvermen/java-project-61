@@ -2,12 +2,12 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Progression {
-     Random random = new Random();
-     int MIN_LENGTH = 5;
-     int MAX_LENGTH = 10;
+    Random random = new Random();
+    int minLength = 5;
+    int maxLength = 10;
 
     public String generateQuestion() {
-        int length = random.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
+        int length = random.nextInt(maxLength - minLength + 1) + minLength;
         int start = random.nextInt(10);
         int step = random.nextInt(5) + 1;
 

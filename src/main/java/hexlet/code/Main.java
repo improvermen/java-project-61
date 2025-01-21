@@ -1,8 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-
 public class Main {
     public static void main(String[] args) {
         Engine engine = new Engine();

@@ -112,7 +112,7 @@ public class Engine {
             }
         }
         System.out.println("Congratulations, " + name);
-        }
+    }
 
     public void startProgression() {
         Progression progressionGame = new Progression();
@@ -174,5 +174,5 @@ public class Engine {
         }
         System.out.println("Congratulations, " + name + "!");
     }
-    }
+}
 
