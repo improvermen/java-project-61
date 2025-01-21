@@ -6,8 +6,8 @@ public class Gcd {
     private Random random = new Random();
 
     public int[] generateQuestion() {
-        int num1 = random.nextInt(100) + 1; // Генерируем случайное число от 1 до 100
-        int num2 = random.nextInt(100) + 1; // Генерируем случайное число от 1 до 100
+        int num1 = random.nextInt(100) + 1;
+        int num2 = random.nextInt(100) + 1;
         return new int[]{num1, num2};
     }
 
