@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.Gcd;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -79,4 +81,37 @@ public class Engine {
         }
         System.out.println("Congratulations, " + name);
     }
-}
+
+    public void startGCDGame() {
+        Gcd gcdGame = new Gcd();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.println("May I have your name? ");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+        System.out.println("Find the greatest common divisor of given numbers.");
+
+        int correctAnswers = 0;
+        while (correctAnswers < 3) {
+            int[] numbers = gcdGame.generateQuestion();
+            int num1 = numbers[0];
+            int num2 = numbers[1];
+            System.out.println("Question: " + num1 + " " + num2);
+            System.out.println("Your answer: ");
+            String answer = scanner.nextLine().trim();
+
+            int correctAnswer = gcdGame.getGcd(num1, num2);
+            if (Integer.parseInt(answer) == correctAnswer) {
+                System.out.println("Correct!");
+                correctAnswers++;
+            } else {
+                System.out.println(answer + " is wrong answer ;(. Correct answer was " + correctAnswer);
+                System.out.println("Let's try again, " + name);
+                return;
+            }
+        }
+        System.out.println("Congratulations, " + name);
+        }
+
+
+    }
+

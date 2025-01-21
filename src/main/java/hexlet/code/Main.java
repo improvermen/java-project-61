@@ -13,6 +13,7 @@ public class Main {
             System.out.println("1 - Greet");
             System.out.println("2 - Even");
             System.out.println("3 - Calc");
+            System.out.println("4 - GCD");
             System.out.println("0 - Exit");
             System.out.print("Your choice: ");
 
@@ -28,6 +29,8 @@ public class Main {
                     break;
                 case 3:
                     engine.startCalcGame();
+                    break;
+                case 4: engine.startGCDGame();
                     break;
                 case 0:
                     running = false;
