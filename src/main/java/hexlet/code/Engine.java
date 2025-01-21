@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Gcd;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -137,7 +138,37 @@ public class Engine {
                 correctAnswers++;
             } else {
                 System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + correctAnswer);
-                System.out.println("Let's try again, %s!%n", name);
+                System.out.println("Let's try again, " + name + "!");
+                return;
+            }
+        }
+        System.out.println("Congratulations, " + name + "!");
+    }
+
+    public void startPrime() {
+        Prime primeGame = new Prime();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+
+        int correctAnswers = 0;
+
+        while (correctAnswers < 3) {
+            int question = primeGame.generateQuestionPrime();
+            String correctAnswer = primeGame.getCorrectAnswer(question);
+
+            System.out.println("Question: " + question);
+            System.out.print("Your answer: ");
+            String userAnswer = scanner.nextLine();
+
+            if (userAnswer.equals(correctAnswer)) {
+                System.out.println("Correct!");
+                correctAnswers++;
+            } else {
+                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + correctAnswer);
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
         }
