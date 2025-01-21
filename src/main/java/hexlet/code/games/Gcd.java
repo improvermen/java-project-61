@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Gcd {
-    private Random random = new Random();
+    Random random = new Random();
 
     public int[] generateQuestion() {
         int num1 = random.nextInt(100) + 1;

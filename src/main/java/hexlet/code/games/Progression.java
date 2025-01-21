@@ -29,7 +29,7 @@ public class Progression {
             }
         }
 
-        return question.toString() + "|" + correctAnswer;
+        return question + "|" + correctAnswer;
 
     }
 }
