@@ -5,7 +5,8 @@ public class Prime {
     Random random = new Random();
 
     public int generateQuestionPrime() {
-        return random.nextInt(100) + 1; // Генерируем случайное число от 1 до 100
+        return random.nextInt(100) + 1;
+
     }
 
     public boolean isPrime(int number) {
@@ -19,6 +20,7 @@ public class Prime {
     }
 
     public String getCorrectAnswer(int number) {
-        return isPrime(number) ? "yes" : "no"; // Возвращаем "yes" или "no" в зависимости от простоты числа
+        return isPrime(number) ? "yes" : "no";
+
     }
 }
