@@ -57,20 +57,12 @@ public class Engine {
             System.out.println("Your answer: ");
             String answer = scanner.nextLine();
 
-            String correctAnswer;
-            switch (operation) {
-                case "+":
-                    correctAnswer = String.valueOf(num1 + num2);
-                    break;
-                case "-":
-                    correctAnswer = String.valueOf(num1 - num2);
-                    break;
-                case "*":
-                    correctAnswer = String.valueOf(num1 * num2);
-                    break;
-                default:
-                    throw new IllegalArgumentException("Unknown operation: " + operation);
-            }
+            String correctAnswer = switch (operation) {
+                case "+" -> String.valueOf(num1 + num2);
+                case "-" -> String.valueOf(num1 - num2);
+                case "*" -> String.valueOf(num1 * num2);
+                default -> throw new IllegalArgumentException("Unknown operation: " + operation);
+            };
 
             if (answer.equals(correctAnswer)) {
                 System.out.println("Correct!");
